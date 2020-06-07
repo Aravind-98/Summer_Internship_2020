@@ -5,3 +5,6 @@ I shall update this readme document explaining the methodology used. I shall als
 Index_Track.ipynb contains the RNN based approach for developing the Index Tracker.
 The file used was **Price_All.csv**, it is the dataset Divyashish used.
 * It contains 46 stocks in total
+
+# Blogs:
+* [AutoEncoders for stock market data](https://towardsdatascience.com/autoencoders-for-the-compression-of-stock-market-data-28e8c1a2da3e)
