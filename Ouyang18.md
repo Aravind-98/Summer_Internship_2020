@@ -23,11 +23,11 @@ reflects the nonlinear impact of market portfolio on different stocks.
 
 Further some similarities and distinctions are drawn between CAPM and this process.
 I intend to use a sequence to sequence LSTM autoencoder which I assume would perform better given that it accounts for time-dependencies across our time series data.
-In my case, I plan to use a data vector as input of each time-step, this 1-d vector has #number_of_stocks(n) number of elements in it(46) in our case. 
+In my case, I plan to use a data vector as input of each time-step, this n-d vector has #number_of_stocks(n) number of elements in it(46) in our case. 
 ![seq2seq model](https://miro.medium.com/max/5028/1*tY4F3BPq4ctTMelMEnLZvw.png)
 
 Once we have the denoised representation of out data, the author then focuses on finding the similarity between each stock and it's denoised representation. He computes this by simply taking **d_i=(||x_i - x_i_hat ||)^(2)**
-He then takes the 'h' most similar stocks and 'l' least similar stocks such that h<l.
+He then takes the 'h' most similar stocks and 'l' least similar stocks such that h<l (this can be obtained by the sorting the distance measure).
 
 This finishes the stock selection process.
 
@@ -35,7 +35,7 @@ This finishes the stock selection process.
 
 
 2) The author trains a standard Deep Neural Network and devises a method to compute the weights used by taking non-linear activations like 'ReLU' for convenience to compute the weights of the corresponding stocks.
-I have tried the same using a RNN/LSTM based approach to account for time-dependence. However as a drawback, owing to the complications of my model, I wouldn't be able to find the weights.
+I have tried the same using a RNN/LSTM based approach to account for time-dependence. However as a drawback, owing to the complications of my model, I wouldn't be able to find the weights. I will be explaing the details of my model below.
 
 ___
 *I will briefly **explain the RNN cell and architecture** along with its role in my ideation of the problem.*
@@ -48,9 +48,6 @@ Basically, we have just one cell which takes in a input(one training example) sa
 LSTM and GRU architectures only vary in the basic type of cell being used. RNNs have an issue in remembering data too far down the line. LSTM/GRUs come out as good alternatives then as they have certian gates within the cells which allow them to remember and forget information whenever necessary.
 ![LSTM and GRU](https://miro.medium.com/max/4212/1*E18UBv1G7nAaq-soA-zBlw.png)
 ___
-
-
-
 
 * [Advantages of LSTM autoencoders vs Normal autoencoders ](https://www.quora.com/What-are-advantages-of-LSTM-autoencoders-over-normal-autoencoders)
 * [Example of rare event classification using LSTM Autoencoders](https://towardsdatascience.com/lstm-autoencoder-for-extreme-rare-event-classification-in-keras-ce209a224cfb)
