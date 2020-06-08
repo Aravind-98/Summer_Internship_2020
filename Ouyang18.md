@@ -11,7 +11,7 @@
 The problem is broken down into 2 stages: stock selection and weight allocation.
 1) The stock selection problem is addressed by using what's known as a **Deep AutoEncoder**.
 In a sense it can be viewed as PCA's non-linear counterpart. The basic idea is straightforward as it is.
-The input is X=[x_1,x_2,...,x_n] where each **x_i is the time-series data of the ith stock**. This input is compressed to lower-dimensional form by a hidden layer of neurons in the middle and then expanded again back to original dimensions. There is some loss of information here, due to compression process. We train the network in such a manner that this loss of information mainly accounts for the statistical noise.
+The input is X=[x_1,x_2,...,x_n] where each **x_i is the 'Adj closing price' time series of the ith stock**. This input is compressed to lower-dimensional form by a hidden layer of neurons in the middle and then expanded again back to original dimensions. There is some loss of information here, due to compression process. We train the network in such a manner that this loss of information mainly accounts for the statistical noise.
 Due to non-linearity, this is generally more powerful than the PCA. 
 
 *It is an unsupervised learning problem where the input is trained on itself (ie X_hat=F(X)).*
