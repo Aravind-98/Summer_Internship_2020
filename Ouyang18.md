@@ -24,7 +24,7 @@ reflects the nonlinear impact of market portfolio on different stocks.
 Further some similarities and distinctions are drawn between CAPM and this process.
 I intend to use a sequence to sequence LSTM autoencoder which I assume would perform better given that it accounts for time-dependencies across our time series data.
 In my case, I plan to use a data vector as input of each time-step, this 1-d vector has #number_of_stocks(n) number of elements in it(46) in our case. 
-![seq2seq model](https://3qeqpr26caki16dnhd19sv6by6v-wpengine.netdna-ssl.com/wp-content/uploads/2018/08/LSTM-Autoencoder-Model.png)
+![seq2seq model](https://miro.medium.com/max/5028/1*tY4F3BPq4ctTMelMEnLZvw.png)
 
 Once we have the denoised representation of out data, the author then focuses on finding the similarity between each stock and it's denoised representation. He computes this by simply taking **d_i=(||x_i - x_i_hat ||)^(2)**
 He then takes the 'h' most similar stocks and 'l' least similar stocks such that h<l.
