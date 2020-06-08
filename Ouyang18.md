@@ -51,7 +51,7 @@ ___
 
 * [Advantages of LSTM autoencoders vs Normal autoencoders ](https://www.quora.com/What-are-advantages-of-LSTM-autoencoders-over-normal-autoencoders)
 * [Example of rare event classification using LSTM Autoencoders](https://towardsdatascience.com/lstm-autoencoder-for-extreme-rare-event-classification-in-keras-ce209a224cfb)
-```
+
 Papers required to be researched further:
 * Hinton G E, Salakhutdinov R R. (2006). Reducing the dimensionality of data with neural networks.
 Science, 313(5786):504.
@@ -63,4 +63,4 @@ Operations Research, 34(4), 1177-1191.
 Journal of Quantitative & Technical Economics, 23(10), 130-140.
 * Jian, G., Yang D. (2006). A comparative analysis of replication method of index
 investment. Journal of Financial Research,51(8), 31-40.
-```
+
