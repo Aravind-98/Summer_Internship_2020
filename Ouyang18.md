@@ -31,8 +31,26 @@ He then takes the 'h' most similar stocks and 'l' least similar stocks such that
 
 This finishes the stock selection process.
 
+**Note: This is the portion of the paper that I am not satisfied with! I have observed and compared the results of my work as well as that of the author, and I don't seem to obtain a good result for denoising. I wish to discuss this further with you, Mam.**
+
+
 2) The author trains a standard Deep Neural Network and devises a method to compute the weights used by taking non-linear activations like 'ReLU' for convenience to compute the weights of the corresponding stocks.
-I have tried the same using a RNN based approach to account for time-dependence. However as a drawback, owing to the complications of my model, I wouldn't be able to find the weights 
+I have tried the same using a RNN/LSTM based approach to account for time-dependence. However as a drawback, owing to the complications of my model, I wouldn't be able to find the weights.
+
+___
+*I will briefly **explain the RNN cell and architecture** along with its role in my ideation of the problem.*
+![RNN architecture](https://colah.github.io/posts/2015-08-Understanding-LSTMs/img/RNN-unrolled.png)
+
+Basically, we have just one cell which takes in a input(one training example) say *x<t>*, does some non-linear transformations on it and gives a output say *y<t>* and passes a primitive form of the output say *a<t>* to be used in the next time step. And so on, the cell recurs for as many time steps as specified and passing the information along time. In our case, we have T{1708:train and 733:test} timesteps with the input at each time step being a K-dimensional(corresponding to number of stocks chosen) vector of data. So, at timestep 1 we perform some computations give and try to predict the benchmark price with the K-D vector and pass along the intermediate info through time. The later timesteps get the info of the previous values used to try and predict a better value when it's upto them. 
+  
+![RNN Cell](https://www.researchgate.net/publication/332663947/figure/fig1/AS:751783865511938@1556250649554/Simple-RNN-cell-structure-in-hidden-layer-b.png)
+
+LSTM and GRU architectures only vary in the basic type of cell being used. RNNs have an issue in remembering data too far down the line. LSTM/GRUs come out as good alternatives then as they have certian gates within the cells which allow them to remember and forget information whenever necessary.
+![LSTM and GRU](https://miro.medium.com/max/4212/1*E18UBv1G7nAaq-soA-zBlw.png)
+___
+
+
+
 
 * [Advantages of LSTM autoencoders vs Normal autoencoders ](https://www.quora.com/What-are-advantages-of-LSTM-autoencoders-over-normal-autoencoders)
 * [Example of rare event classification using LSTM Autoencoders](https://towardsdatascience.com/lstm-autoencoder-for-extreme-rare-event-classification-in-keras-ce209a224cfb)
