@@ -34,6 +34,8 @@ This finishes the stock selection process.
 2) The author trains a standard Deep Neural Network and devises a method to compute the weights used by taking non-linear activations like 'ReLU' for convenience to compute the weights of the corresponding stocks.
 I have tried the same using a RNN based approach to account for time-dependence. However as a drawback, owing to the complications of my model, I wouldn't be able to find the weights 
 
+* [Advantages of LSTM autoencoders vs Normal autoencoders ](https://www.quora.com/What-are-advantages-of-LSTM-autoencoders-over-normal-autoencoders)
+* [Example of rare event classification using LSTM Autoencoders](https://towardsdatascience.com/lstm-autoencoder-for-extreme-rare-event-classification-in-keras-ce209a224cfb)
 ```
 Papers required to be researched further:
 * Hinton G E, Salakhutdinov R R. (2006). Reducing the dimensionality of data with neural networks.
