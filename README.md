@@ -9,3 +9,4 @@ The file used was **Price_All.csv**, it is the dataset Divyashish used.
 # Blogs:
 * [AutoEncoders for stock market data](https://towardsdatascience.com/autoencoders-for-the-compression-of-stock-market-data-28e8c1a2da3e)
 * [gumbel softmax](https://blog.evjang.com/2016/11/tutorial-categorical-variational.html)
+* [Index Tracking portfolio optimization](https://towardsdatascience.com/index-tracking-portfolio-optimization-8250d27449e6)
